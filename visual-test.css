@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#adjust {
+    margin: 10px;
+}
+
+#canvas {
+    font-size: 30px;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.picker {
+    float: left;
+    margin-right: 20px;
+}
