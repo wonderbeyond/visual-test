@@ -1,6 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML>
+<html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <title>Color effect test</title>
@@ -12,34 +11,27 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
-    $('#canvas').click(function(){
-      if( $(this).css('font-weight') == 'normal' ) {
-        $(this).css('font-weight', 'bold');
-      } else {
-        $(this).css('font-weight', 'normal');
-      }
-    });
-    
-    $('#test').click(function(){
+    $('#bg_picker').farbtastic('#bg_color');
+    $('#fg_picker').farbtastic('#fg_color');
+    var run_test = function() {
       $('#canvas').css('color',            $('#fg_color').val());
       $('#canvas').css('background-color', $('#bg_color').val());
       return false;
-    });
-
-    $('#bg_picker').farbtastic('#bg_color');
-    $('#fg_picker').farbtastic('#fg_color');
+    }
+    $('#test').click(function() { return run_test(); });
+    //$('body').click(function() { return run_test(); });
   });
 </script>
 </head>
 
 <body>
-  <div id="canvas">Hello World! 你好世界!</div>
+  <div id="canvas" contenteditable="true">Hello World! 你好世界!</div>
 
   <div id="adjust">
     <form action="">
-      <label for="bg_color">背景:</label>
+      <label for="bg_color">背景颜色:</label>
       <input type="text" id="bg_color" value="#FFFFFF"></input>
-      <label for="fg_color">前景:</label>
+      <label for="fg_color">文字颜色:</label>
       <input type="text" id="fg_color" value="#000000"></input>
       <button id="test">测试</button>
     </form>

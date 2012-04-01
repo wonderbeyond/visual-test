@@ -12,9 +12,11 @@ body {
     margin: 0 0 20px 0;
     padding: 10px;
     cursor: pointer;
+} #canvas:hover {
+    font-weight: bold;
 }
 
 .picker {
     float: left;
-    margin-right: 20px;
+    margin: 20px;
 }
